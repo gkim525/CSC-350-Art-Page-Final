@@ -1,0 +1,20 @@
+mysql -u root -p
+SHOW DATABASES; 
+USE gallery; 
+SHOW TABLES; 
+
+DROP TABLE users; // if a given table needs to be deleted
+SELECT * FROM users; // to show everything inside users
+
+CREATE TABLE users (user_id INT UNSIGNED NOT NULL AUTO_INCREMENT, first_name VARCHAR(20) NOT NULL, last_name VARCHAR(40) NOT NULL, email VARCHAR(60) NOT NULL, pass VARCHAR(40) NOT NULL, registration_date DATETIME NOT NULL, PRIMARY KEY (user_id), UNIQUE (user_id), UNIQUE (email), INDEX full_name (last_name, first_name)); 
+
+INSERT INTO users (first_name, last_name, email, pass, registration_date) VALUES ('James', 'Smith', 'jsmith@google.com', SHA1('12345'), NOW()), ('Mary', 'Davis', 'davism@bing.com', SHA1('hello_there'), NOW()),('Dorothy', 'Taylor', 'dorothy@gmail.com ', SHA1('1231k'), NOW()),('Tyler', 'Campbell', 'tcamp87@yahoo.com', SHA1('87123a'), NOW()), ('Alexander', 'Joyce', 'joyce@gmail.com', SHA1('myPass123'), NOW());
+
+CREATE TABLE art (id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT, item_name VARCHAR(50) NOT NULL, image varchar(255) NOT NULL, item_category VARCHAR(50) NOT NULL, artist_name VARCHAR(50) NOT NULL, price DECIMAL (10,2), quantity INT UNSIGNED NOT NULL, year_produced INT UNSIGNED NOT NULL, PRIMARY KEY (id));
+
+INSERT INTO art (item_name, image, item_category, artist_name, price, quantity, year_produced) VALUES ('Starry Night', 'StarryNight.jpg', 'Paintings', 'Vincent Van Gogh', 25, 200, 1889), ('Nighthawks', 'nighthawks.jpg', 'Paintings', 'Edward Hopper', 15.5, 50, 1942), ('The Great Wave off Kanagawa', 'kanagawa.jpg', 'Paintings', 'Katsushika Houkusai', 35, 1, 1831), ('Statue of Amenhotep', 'Amenhotep.jpg', 'Sculptures', 'Unknown', 835.88, 1, 1350), ('Bike on Chair', 'bike.jpg', 'Mixed Media', 'John Smith', 15, 100, 2016); 
+
+CREATE TABLE transaction (sales_num INT UNSIGNED NOT NULL AUTO_INCREMENT, first_name VARCHAR (50) NOT NULL, last_name VARCHAR (50), mailing_address VARCHAR (100) NOT NULL, email VARCHAR (50), card_num MEDIUMINT UNSIGNED NOT NULL, card_expiry TINYINT UNSIGNED NOT NULL, credit_cvv TINYINT UNSIGNED NOT NULL, item_id INT UNSIGNED NOT NULL, quantity INT UNSIGNED NOT NULL, order_total INT UNSIGNED, date_purchased INT UNSIGNED NOT NULL, PRIMARY KEY (sales_num));
+
+
+

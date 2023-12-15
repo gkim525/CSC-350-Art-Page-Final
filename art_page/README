@@ -1,0 +1,22 @@
+    Nov 7 23 updates: 
+index.html has a header of the page where name of company will go and also i created navigation bar. 
+styles.html has some design with colors and other properties for header and nav bar (I put some colors and other properties just for showing purposes. We will finalize our design later on.
+    Nov 8 23 updates: 
+Added footer to index.html. Working on implementing a slideshow with HTML, CSS and Javascript. 
+Changed color scheme in styles.html. Added relevant css edits to footer section.
+    Nov 17, 23 updates:
+I redid header and navigation bar. Header now consists Logo(Has to be chosen) together with company name , search bar, login and cart. I added icon library for styling search, login, cart icons.
+Navigation bar consist Categories, Deals, Locations, Returns, Contact Us. Most of the style and colors should be ignored it is done for testing puprposes and for laying out all components in proper way.
+-----
+    Nov 28 23 updates:
+Fixed footer, got rid of slideshow, implemented must-have products row 
+Constructed returns page and linked it to homepage
+Added SignUp button
+Added LogIn button
+Added Categories dropdown button
+Added and updated a policy page
+    Dec 1, 23 updates:
+LogIn and SignUp button changed to link to my account
+It links to login.html with signIN-signUP form
+I also added JS file where logic for Cattegory button and SIGNIN SIGNUP buttons stored
+I linked JS file to all HTML files so it can perform DROPDOWN cattegories logic on all files.
